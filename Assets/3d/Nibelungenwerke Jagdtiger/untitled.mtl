@@ -1,0 +1,542 @@
+# Blender 4.2.3 LTS MTL File: 'None'
+# www.blender.org
+
+newmtl 1detail1#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl 1detail2#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl 1detail3#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl 1detail4#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl body#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl cover#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl cover1#base.mtl.008
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl cover1#base.mtl.009
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl detail4#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl engine#base.mtl.008
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl engine#base.mtl.009
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl enumerator#number1.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/0.dds
+map_d E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/0.dds
+
+newmtl enumerator#number2.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/1.dds
+map_d E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/1.dds
+
+newmtl enumerator#number3.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/2.dds
+map_d E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/2.dds
+
+newmtl gun#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl gun_rot#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl mg42#mg42.mtl.002
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/mg42.dds
+
+newmtl mgun#base.mtl.008
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl mgun#base.mtl.009
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl part1#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl part2#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl part3#base.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl trackl#track1.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+map_d E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+
+newmtl trackl#track2.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+map_d E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+
+newmtl trackr#track1.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+map_d E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+
+newmtl trackr#track2.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+map_d E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/track_pz6-2.dds
+
+newmtl turret_mgun#base.mtl.008
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl turret_mgun#base.mtl.009
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/jgdtiger.dds
+
+newmtl wheell1#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell10#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell11#wheels#alfa.mtl.008
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell11#wheels#alfa.mtl.009
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell2#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell3#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell4#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell5#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell6#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell7#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell8#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheell9#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr1#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr10#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr11#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr2#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr3#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr4#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr5#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr6#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr7#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr8#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelr9#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelsl#wheels#alfa.mtl.008
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelsl#wheels#alfa.mtl.009
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds
+
+newmtl wheelsr#wheels#alfa.mtl.004
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E:/Projects/online/Assets/3d/Nibelungenwerke Jagdtiger/wheels.dds

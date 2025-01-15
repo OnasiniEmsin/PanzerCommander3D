@@ -1,0 +1,32 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class shell : MonoBehaviour
+{
+    public int uron=110;
+    public GameObject pentsmoke;
+    public tank mytank;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    /*void Update()
+    {
+        
+    }*/
+    void OnCollisionEnter(Collision other){
+        if(other.gameObject.tag=="Armor"){
+            uron=Random.Range(uron*3/4,uron*5/4);
+            tank tank =other.gameObject.GetComponent<tank>();
+            tank.setDamaged(uron);
+            tank.deleteShell();
+            mytank.PlusDamage(uron);
+        }
+        Destroy(Instantiate(pentsmoke,transform.position,Quaternion.identity),3);
+        Destroy(gameObject);
+    }
+}

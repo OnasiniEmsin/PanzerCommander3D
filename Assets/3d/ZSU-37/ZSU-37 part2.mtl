@@ -1,0 +1,271 @@
+# Blender MTL File: 'None'
+# Material Count: 25
+
+newmtl None
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl body#base.mtl
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl gun#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl gun_rot#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl part1#track1.mtl
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl part1#track2.mtl
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl part1#track3.mtl
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl turret#base#alfa#2sided.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl turret#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell1#base#alfa#2sided.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell1#base.mtl
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell3#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell4#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell5#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell6#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell7#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheell8#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr1#base#alfa#2sided.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr1#base.mtl
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr2#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr3#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr4#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr5#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr6#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds
+
+newmtl wheelr8#base.mtl.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\BUTTHE4D\\Desktop\\-vehicle\\tank_light\\x\\zsu37_xx\\zsu37_xx.dds

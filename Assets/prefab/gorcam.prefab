@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3886850926630917299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3886850926630917309}
+  - component: {fileID: 3886850926630917308}
+  m_Layer: 0
+  m_Name: gorcam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3886850926630917309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886850926630917299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3886850926630917308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886850926630917299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615b122b6933f2a478d6f7d8bb103600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tanks:
+  - {fileID: 7988988487113326505, guid: 236eb1bb9162dc14aac524f0b3145992, type: 3}
+  - {fileID: 3640646769943142218, guid: fad9d9c9bd9384b458ba8c53b25f691b, type: 3}
+  - {fileID: 8588936258933533698, guid: 35d5d8c29a0ccb74e888be1a2337f8e9, type: 3}
+  - {fileID: 16667016563031619, guid: d1d6751ec9dbbc647817dde255773bb7, type: 3}
+  - {fileID: 3263890735407687080, guid: 9aeaae1286e0e1a4dbcef2fb5ae794be, type: 3}
+  - {fileID: 4177954690584968236, guid: 3ab521d16560e824987a86a2c37d4a51, type: 3}
+  - {fileID: 3233222610273227178, guid: 6cca777790e1d384189cd9c0cfd0c17d, type: 3}
+  - {fileID: 4032083590624244164, guid: a10771e13e41f0641a6cdd35b544f542, type: 3}
+  - {fileID: 517446084650912739, guid: 00d5a0738e86f654fbb4721f38831353, type: 3}
+  - {fileID: 5852001374495167758, guid: 68ef9c482b78d4e44bec0f6944161cb3, type: 3}
+  - {fileID: 181236208779565173, guid: 45bd4c8dd44fc0b479334d3c609a8acf, type: 3}
+  - {fileID: 5481162396989630216, guid: 2b581a099c0c4714fb28301ef4817fac, type: 3}
+  - {fileID: 4706562331409615723, guid: fb9398c3af9a75341843083ef6abd4fe, type: 3}
+  - {fileID: 5584334817121646343, guid: 5eaf2fa116b0601468cf126297fcab14, type: 3}
+  - {fileID: 3187654882298909885, guid: facad798c491c5d4891dd374ca2e333d, type: 3}
+  - {fileID: 2328813864426343047, guid: 372a3f529c944264b9b8fb24e61617e0, type: 3}
+  go: {fileID: 0}
+  tank: {fileID: 0}
