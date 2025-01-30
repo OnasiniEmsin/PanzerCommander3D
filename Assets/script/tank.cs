@@ -22,9 +22,9 @@ public class tank : MonoBehaviour
     public AudioSource engine;
     AudioSource driver;
     GameObject shell1,camera,HPCanvas;
-    Transform CameraPosition,shellStartPos;
+    Transform CameraPosition,shellStartPos,bashnya;
     Rigidbody rb;
-    bool ismoving,ismovingComplex;
+    bool ismoving,ismovingComplex,isonline;
     Image _imHp,reloadBar;short _hitpointcomplex;
     public float aaaa;
     HP hp;
@@ -34,23 +34,35 @@ public class tank : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        g = Physics.gravity.y;
         CameraPosition=new GameObject().transform;
-        CameraPosition.position=transform.position+transform.forward*20;
+        CameraPosition.position=transform.position+transform.up*10;
         CameraPosition.parent=transform;
-        view=GetComponent<PhotonView>();
         hpstring=health.ToString();
-        
         rb=GetComponent<Rigidbody>();rb.centerOfMass=Vector3.up*-.9f;
         driver=GetComponent<AudioSource>();
+        summaUrona=PlayerPrefs.GetInt("isonline");
+        if(summaUrona==1){
+        view=GetComponent<PhotonView>();
+        isonline=true;
+        }else{
+            isonline=false;
+        }
+        summaUrona=0;
+        _dushman=transform;
         setHP();
         dust=Instantiate(dust,shellStartPos.position,transform.rotation);
-        dust.transform.parent=transform;
+        dust.transform.parent=bashnya;
         engine=GameObject.Find(gameObject.name+"/Cube").GetComponent<AudioSource>();
         engine.volume=0.1f;
         engine.loop=true;
         engine.spatialBlend=1;
         kaseta=ifneedKaseta;baraban=ifneedBaraban;
         baraban--;
+        summaUrona=PlayerPrefs.GetInt("isonline");
+        
+        
+        
         StartCoroutine(reloading());
     }
 
@@ -61,16 +73,38 @@ public class tank : MonoBehaviour
 	if(transform.position.y<-25){
 		DestroyTheTank();
 	}	
-        if(isbot&&view.IsMine){
+        if(isbot==false){
+            if(isonline){
+            if(view.IsMine){
             
             if(health<=0){
                 view.RPC("DestroyTheTank",RpcTarget.All);
             }
+            
+            view.RPC("receive",RpcTarget.All);bashlig();
+            }else{
+                if(health<=0){
+                DestroyTheTank();
+            }
+            }
+            }else{
+                
+                receive();bashlig();
+            }
             _Camera.transform.position=CameraPosition.position;
             CheckInput();
+            
+        }else{
+            if(health<=0){
+                DestroyTheTank();
+            }
+            bot();
+            receive();
+            bashlig();
         }
+        HPCanvas.transform.rotation=Quaternion.LookRotation(-camera.transform.position+HPCanvas.transform.position,camera.transform.up);
+        dir=-transform.position+_dushman.position;
         hp._ism.text=ism;
-        view.RPC("receive",RpcTarget.All,hpstring);
         if(ismovingComplex!=ismoving){
         if(ismoving){
             driver.Play();
@@ -113,6 +147,7 @@ public class tank : MonoBehaviour
     bool casseteNowWorking=false;
     void checktank(){
         if(isReadyToFire){
+            mojjalgaol();
             if(isBaraban==false){
                 timerel=0;
             }else{
@@ -135,7 +170,12 @@ public class tank : MonoBehaviour
             }
             isReadyToFire=false;
             fire1();
+            if(isonline){
+            
             view.RPC("fire",RpcTarget.All);
+            }else{
+                fire();
+            }
 
         }
     }
@@ -146,7 +186,9 @@ public class tank : MonoBehaviour
             if(isReadyToFire==false){
             timerel+=.2f;
             aaaa=timerel;
+            if(isbot==false){
             reloadBar.fillAmount=aaaa/timeOfFire;
+            }
             if(timeOfFire<=timerel){
                 isReadyToFire=true;timerel=0;
                 if(casseteNowWorking){
@@ -158,21 +200,32 @@ public class tank : MonoBehaviour
         }
     }
     void fire1(){
-        shell=Instantiate(Realshell,shellStartPos.position+transform.forward*5+Vector3.up*-1,transform.rotation).GetComponent<shell>();
+        shell=Instantiate(Realshell,shellStartPos.position,shellStartPos.rotation).GetComponent<shell>();
+        rb.AddForce(transform.forward*-10000);
         Destroy(shell.gameObject,5);
+        if(DamageOfShell>=250){
+        if(Random.Range(0,50)==5){
+            shell.uron=DamageOfShell*5;
+        }else{
         shell.uron=DamageOfShell;
-        shell.GetComponent<Rigidbody>().velocity=velocityOfShell*transform.forward;
+        }
+        }
+        shell.GetComponent<Rigidbody>().velocity=velocityOfShell*shellStartPos.forward;
         shell.mytank=GetComponent<tank>();
     }
     void fireshell(){
-        shell1=Instantiate(Shell,shellStartPos.position+transform.forward*2,transform.rotation);
+        shell1=Instantiate(Shell,shellStartPos.position,shellStartPos.rotation);
         Destroy(shell1.gameObject,5);
         dust.SetActive(false);
         dust.SetActive(true);
-        shell1.GetComponent<Rigidbody>().velocity=velocityOfShell*transform.forward;
+        shell1.GetComponent<Rigidbody>().velocity=velocityOfShell*shellStartPos.forward;
     }
     public void setDamaged(int uron){
+        if(isonline){
         view.RPC("Damaged",RpcTarget.All,uron);
+        }else{
+            Damaged(uron);
+        }
     }
 
     public void deleteShell(){
@@ -187,30 +240,36 @@ public class tank : MonoBehaviour
         Destroy(shell1);
     }
     [PunRPC]
-    void receive(string ism){
+    void receive(){
         hp.jon=health;
         hp.jonum=_hitpointcomplex;
         text.text=health.ToString();
-        HPCanvas.transform.rotation=Quaternion.LookRotation(-camera.transform.position+HPCanvas.transform.position,camera.transform.up);
     }
     [PunRPC]
     void PD(int urru){
         summaUrona+=urru;
     }
     public void PlusDamage(int urrru){
+        if(isonline){
         view.RPC("PD",RpcTarget.All,urrru);
+        }else{
+            PD(urrru);
+        }
     }
     [PunRPC]
     void setHP(){
+        bashnya=GameObject.Find(gameObject.name+"/bash").transform;
         HPCanvas=GameObject.Find(gameObject.name+"/hp");
         text=GameObject.Find(gameObject.name+"/hp/Text (TMP)").GetComponent<TMP_Text>();
         camera=GameObject.Find("gorcam/MC");
         _imHp=GameObject.Find(gameObject.name+"/hp/hp").GetComponent<Image>();
         _hitpointcomplex=(short)health;
-        shellStartPos=GameObject.Find(gameObject.name+"/pushuch").transform;
+        shellStartPos=GameObject.Find(gameObject.name+"/bash/pushuch").transform;
         reloadBar=GameObject.Find("Canvas/reload/reload").GetComponent<Image>();
         hp=HPCanvas.GetComponent<HP>();
         GameObject.Find(gameObject.name+"/hp/Tankname").GetComponent<TMP_Text>().text=ism;
+        ism="BOT"+gameObject.name;
+        if(isonline){
         if(view.IsMine){
             qoralanma=PlayerPrefs.GetString("ism");
             view.Owner.NickName=qoralanma;
@@ -218,6 +277,11 @@ public class tank : MonoBehaviour
             Debug.Log("ism Tanlandi"+ism);
         }else{
             ism=view.Owner.NickName;
+        }
+        }else{
+            if(isbot==false){
+                _Camera.transform.parent=transform;
+            }
         }
         
         StartCoroutine("Zaylop");
@@ -237,7 +301,7 @@ public class tank : MonoBehaviour
 
     void Damaged(int daamage){
         health-=daamage;
-        receive(ism);
+        receive();
         aaaa=health;
         aaaa=aaaa/_hitpointcomplex;
         _imHp.fillAmount=aaaa;
@@ -262,10 +326,77 @@ public class tank : MonoBehaviour
         Debug.Log("sheet"+ism);
         StopCoroutine("Zaylop");
     }
+    private float g = Physics.gravity.y;float angleRadians;
+    void mojjalgaol(){
+        Vector3 fromToXZ=new Vector3(dir.x, 0f, dir.z);
+        float x = fromToXZ.magnitude;
+        float y = dir.y;
+        float v2=velocityOfShell*velocityOfShell;
+        angleRadians =Mathf.Sqrt(((v2*v2 - (2 * g * y))/ (g*g * x * x)) - 1);// Mathf.Atan((v2 + Mathf.Sqrt(v2*v2 - g*(g*x*x + 2*y*v2))) / g*x);
+                     
+        angleRadians=Mathf.Atan2(v2/g/x-angleRadians, 1) * Mathf.Rad2Deg;
+        angleRadians=-90-angleRadians;
+        shellStartPos.rotation=bashnya.rotation;
+        shellStartPos.Rotate(angleRadians,0,0);
+    }
     [PunRPC]
     public void UPN(){
             view.RPC("setIsm",RpcTarget.All,"");
             Debug.Log("nickqayta tiklandi"+ism);
+    }
+
+
+    public Transform _dushman;
+    Vector3 dir;
+    float burchak;
+    void bot(){
+        if(_dushman!=null){
+            //dir.y=transform.position.y;
+            burchak=Vector3.Angle(dir, transform.forward);
+            if(burchak>3f){
+                transform.Rotate(0,-Time.deltaTime*Turnspeed,0);ismovingf();
+            }else{
+                if(burchak<=-3){
+                    transform.Rotate(0,Time.deltaTime*Turnspeed,0);ismovingf();
+                }else{
+                    transform.rotation=Quaternion.LookRotation(dir,transform.up);
+                    checktank();
+                }
+            }
+        }
+    }
+    float turnRate;
+    bool isturning;
+    void bashlig(){
+            
+        Vector3 dir2=new Vector3(dir.x,0,dir.z);
+        burchak=Vector3.Angle(dir2, bashnya.forward);
+        if(_dushman!=null){
+        dir2=bashnya.InverseTransformPoint(_dushman.position);
+        }
+        dir2=dir2.normalized;
+        burchak=dir2.x*burchak;
+        if(burchak>=3f){
+            bashnya.Rotate(0,Time.deltaTime*Turnspeed,0);
+            
+        }else{
+            if(burchak<=-3){
+                bashnya.Rotate(0,-Time.deltaTime*Turnspeed,0);
+                
+            }else{
+                if(burchak>0.01f){
+                    
+                    bashnya.Rotate(0,Time.deltaTime*Turnspeed,0);
+                }else{
+                    if(burchak<-0.01f){
+                        
+                        bashnya.Rotate(0,-Time.deltaTime*Turnspeed,0);
+                    }else{
+                        
+                    }
+                }
+            }
+        }
     }
     
 }

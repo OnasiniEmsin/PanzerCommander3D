@@ -19,14 +19,22 @@ public class shell : MonoBehaviour
         
     }*/
     void OnCollisionEnter(Collision other){
+        Destroy(gameObject);
         if(other.gameObject.tag=="Armor"){
-            uron=Random.Range(uron*3/4,uron*5/4);
             tank tank =other.gameObject.GetComponent<tank>();
+            if(tank.health<=uron*5/4){
+                uron*=5;
+                uron/=4;
+            }else{
+                uron=Random.Range(uron*3/4,uron*5/4);
+            }
+            
+
             tank.setDamaged(uron);
-            tank.deleteShell();
+            //mytank.deleteShell();
             mytank.PlusDamage(uron);
         }
         Destroy(Instantiate(pentsmoke,transform.position,Quaternion.identity),3);
-        Destroy(gameObject);
+        
     }
 }

@@ -15,12 +15,19 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     public Vector3 position;
     bool iscreatedroom,isStarted;
     float sanoq=5f;
-    int s=0;
+    int s=0,isonlineee;
     void Start()
     {
 	if(iscontinue){
+        isonlineee=PlayerPrefs.GetInt("isonline");
+        if(isonlineee==0){
+            StartCoroutine("sanoqc");
+            offline();
+
+        }else{
 	    joinRoomBotton();
         StartCoroutine("sanoqc");
+        }
 	}else{
 	    PhotonNetwork.ConnectUsingSettings();
 	    PhotonNetwork.ConnectToRegion(region);
@@ -68,10 +75,21 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         gm.Sort();
     }
     public void nextS(){
+        PlayerPrefs.SetInt("isonline",1);
+        PlayerPrefs.Save();
+	SceneManager.LoadScene(1);
+    }
+    public void nextS1(){
+        PlayerPrefs.SetInt("isonline",0);
+        PlayerPrefs.Save();
 	SceneManager.LoadScene(1);
     }
     void checkv(){
         if(iscreatedroom==false){
+            if(isonlineee==0){
+                offline();
+                return;
+            }
             if(isStarted==false){
                 CreateRoomBotton();
                 isStarted=true;
@@ -88,13 +106,31 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         
     }
     
+    
 
 
 
 
 
-
-
+    void offline(){
+        s=0;
+        print("offline");
+        fon.SetActive(false);
+        position=spawnpoints[s].position;
+        s++;
+        gm.tank=Instantiate(gm.go,position,Quaternion.identity).GetComponent<tank>();
+        gm.Sort();
+        iscreatedroom=true;
+        StopCoroutine("sanoqc");
+        gm.tank.isbot=false;
+        while(s<8){
+            position=spawnpoints[s].position;
+            gm.nick=s.ToString();
+            s++;
+            gm.tank=Instantiate(gm.go,position,Quaternion.identity).GetComponent<tank>();
+            gm.rechooset();
+        }
+    }
     void print(string str){
         Debug.Log(str);
     }

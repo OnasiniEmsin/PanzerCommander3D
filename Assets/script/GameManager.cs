@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] tanks;
     public GameObject go;
     public tank tank;
+    public string nick;
     int i;
+
     // Start is called before the first frame update
     public void Start(){
     i=PlayerPrefs.GetInt("numoftank");
@@ -19,8 +21,19 @@ public class GameManager : MonoBehaviour
     public void Sort()
     {
         tank._Camera=gameObject;
-        tank.isbot=true;
-        string nick=DateTime.Now.Second.ToString()+i.ToString();
+        nick=DateTime.Now.Second.ToString()+i.ToString()+"player";
         tank.gameObject.name=nick;
+        tank.isbot=false;
+    }
+    public void rechooset(){
+        
+        tank._Camera=gameObject;
+        nick=nick+DateTime.Now.Second.ToString();
+        tank.gameObject.name=nick;
+        tank.isbot=true;
+        go=tanks[i];
+        if(i!=0){
+            i=i-1+UnityEngine. Random.Range(0,3);
+        }
     }
 }
