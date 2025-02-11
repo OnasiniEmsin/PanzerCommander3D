@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1302878729757419714}
   - component: {fileID: 5936873961796810357}
   - component: {fileID: 6755189066320193370}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: ko'rish
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,7 +7,7 @@ public class spawner : MonoBehaviour
 {
 	public GameManager gm;
 	GameObject go;
-	int i=0;
+	int i=0,level=0;
 	public TMP_Text ismtext;
     // Start is called before the first frame update
     void Start()
@@ -30,13 +30,22 @@ public class spawner : MonoBehaviour
 	        pp();
 	}
 	void pp(){
-		if(i>=gm.tanks.Length){
-			i=gm.tanks.Length-1;
+		if(i>=gm.tankilar[level].Length){
+			if(level==6){
+			i=gm.tankilar[level].Length-1;
+			}else{
+				i=0;level++;
+			}
 		}
 		if(i<0){
+			if(level==0){
 			i=0;
+			}else{
+				i=0;level--;
+			}
 		}
 		PlayerPrefs.SetInt("numoftank", i);
+		PlayerPrefs.SetInt("numofLevel", level);
 		PlayerPrefs.Save();
 		Destroy(go);
 		gm.Start();

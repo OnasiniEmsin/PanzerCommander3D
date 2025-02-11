@@ -7,6 +7,8 @@ public class shell : MonoBehaviour
     public int uron=110;
     public GameObject pentsmoke;
     public tank mytank;
+    public bool isExplosive;
+    public oskolki oskolki;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +35,14 @@ public class shell : MonoBehaviour
             tank.setDamaged(uron);
             //mytank.deleteShell();
             mytank.PlusDamage(uron);
+            
         }
         Destroy(Instantiate(pentsmoke,transform.position,Quaternion.identity),3);
-        
+        if(isExplosive){
+            oskolki=Instantiate(oskolki,transform.position,transform.rotation);
+            oskolki.uron=uron/2;
+            oskolki.mytank=mytank;
+            oskolki.transform.localScale=new Vector3(uron/30,1,1);
+        }
     }
 }

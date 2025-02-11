@@ -11,6 +11,6 @@ public class seeker : MonoBehaviour
         tank=transform.parent.gameObject.GetComponent<tank>();
     }
     void OnTriggerEnter(Collider other){
-        tank._dushman=other.transform.parent;
+        tank._dushman=other.transform;
     }
 }

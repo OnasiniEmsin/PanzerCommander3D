@@ -10,7 +10,7 @@ public class tank : MonoBehaviour
 {
     public bool isbot,isBaraban;
     public float VelocityForward=4,Turnspeed=5,timeOfFire=2;
-    public float velocityOfShell=10,ifneedBarabanReloadTime;
+    public float velocityOfShell=10,ifneedBarabanReloadTime,ifneedKasetaReloadTime;
     public int DamageOfShell=110,health=350;
     public byte ifneedKaseta,ifneedBaraban;
     public GameObject _Camera,Shell,Realshell,dust;
@@ -21,19 +21,23 @@ public class tank : MonoBehaviour
     public shell shell;
     public AudioSource engine;
     AudioSource driver;
-    GameObject shell1,camera,HPCanvas;
-    Transform CameraPosition,shellStartPos,bashnya;
+    GameObject shell1,camera,HPCanvas,hodovaya;
+    Transform CameraPosition,shellStartPos,bashnya,tormoz;
     Rigidbody rb;
     bool ismoving,ismovingComplex,isonline;
     Image _imHp,reloadBar;short _hitpointcomplex;
-    public float aaaa;
+    public float aaaa,ifneedturretlimit=361;
     HP hp;
     public int summaUrona=0;
     string qoralanma="";
     float vboytime;
+    float kvf,kva;
     // Start is called before the first frame update
     void Start()
     {
+        VelocityForward/=1.8f;
+        Turnspeed/=2;
+        kvf=VelocityForward;kva=Turnspeed;
         g = Physics.gravity.y;
         CameraPosition=new GameObject().transform;
         CameraPosition.position=transform.position+transform.up*10;
@@ -49,7 +53,6 @@ public class tank : MonoBehaviour
             isonline=false;
         }
         summaUrona=0;
-        _dushman=transform;
         setHP();
         dust=Instantiate(dust,shellStartPos.position,transform.rotation);
         dust.transform.parent=bashnya;
@@ -103,14 +106,21 @@ public class tank : MonoBehaviour
             bashlig();
         }
         HPCanvas.transform.rotation=Quaternion.LookRotation(-camera.transform.position+HPCanvas.transform.position,camera.transform.up);
+        if(_dushman!=null){
         dir=-transform.position+_dushman.position;
+        }else{
+            dir=Vector3.zero;
+            dir.y=0;
+        }
         hp._ism.text=ism;
         if(ismovingComplex!=ismoving){
         if(ismoving){
             driver.Play();
             engine.Stop();
+            hodovaya.SetActive(true);
         }else{
             driver.Stop();
+            hodovaya.SetActive(false);
             engine.Play();
         }
         ismovingComplex=ismoving;
@@ -122,17 +132,27 @@ public class tank : MonoBehaviour
         if(Input.GetKey(KeyCode.W)){
             transform.Translate(0,0,VelocityForward*Time.deltaTime);
             ismovingf();
+            Turnspeed=kva/2;
+            //tracksf();
         }
         if(Input.GetKey(KeyCode.S)){
-            transform.Translate(0,0,VelocityForward*-Time.deltaTime);
+            transform.Translate(0,0,VelocityForward/2*-Time.deltaTime);
             ismovingf();
+            Turnspeed=kva/2;
+            //tracksb();
         }
+        VelocityForward=kvf;
         if(Input.GetKey(KeyCode.A)){
             transform.Rotate(0,-Time.deltaTime*Turnspeed,0);ismovingf();
+            VelocityForward=kvf/2;
+            //tracksl();
         }
         if(Input.GetKey(KeyCode.D)){
             transform.Rotate(0,Time.deltaTime*Turnspeed,0);ismovingf();
+            VelocityForward=kvf/2;
+            //tracksr();
         }
+        Turnspeed=kva;
         if(Input.GetKey(KeyCode.Space)){
             checktank();
         }
@@ -164,7 +184,7 @@ public class tank : MonoBehaviour
                     }
                     baraban-=1;
                 }else{
-                        casseteNowWorking=true;timerel=timeOfFire-ifneedBarabanReloadTime;
+                        casseteNowWorking=true;timerel=timeOfFire-ifneedKasetaReloadTime;
                 }
                     
             }
@@ -201,7 +221,7 @@ public class tank : MonoBehaviour
     }
     void fire1(){
         shell=Instantiate(Realshell,shellStartPos.position,shellStartPos.rotation).GetComponent<shell>();
-        rb.AddForce(transform.forward*-10000);
+        rb.AddForce(bashnya.forward*-10*DamageOfShell);
         Destroy(shell.gameObject,5);
         if(DamageOfShell>=250){
         if(Random.Range(0,50)==5){
@@ -209,6 +229,8 @@ public class tank : MonoBehaviour
         }else{
         shell.uron=DamageOfShell;
         }
+        }else{
+            shell.uron=DamageOfShell;
         }
         shell.GetComponent<Rigidbody>().velocity=velocityOfShell*shellStartPos.forward;
         shell.mytank=GetComponent<tank>();
@@ -269,6 +291,11 @@ public class tank : MonoBehaviour
         hp=HPCanvas.GetComponent<HP>();
         GameObject.Find(gameObject.name+"/hp/Tankname").GetComponent<TMP_Text>().text=ism;
         ism="BOT"+gameObject.name;
+        hodovaya=GameObject.Find(gameObject.name+"/hodovaya");
+        hodovaya.SetActive(false);
+        ismoving=false;
+        /*rend=GameObject.Find(gameObject.name+"/sep").GetComponent<Renderer>();
+        rend2=GameObject.Find(gameObject.name+"/sep1").GetComponent<Renderer>();*/
         if(isonline){
         if(view.IsMine){
             qoralanma=PlayerPrefs.GetString("ism");
@@ -328,14 +355,18 @@ public class tank : MonoBehaviour
     }
     private float g = Physics.gravity.y;float angleRadians;
     void mojjalgaol(){
+        if(_dushman!=null){
+        dir=shellStartPos.position-_dushman.position;
+        }
         Vector3 fromToXZ=new Vector3(dir.x, 0f, dir.z);
         float x = fromToXZ.magnitude;
         float y = dir.y;
         float v2=velocityOfShell*velocityOfShell;
-        angleRadians =Mathf.Sqrt(((v2*v2 - (2 * g * y))/ (g*g * x * x)) - 1);// Mathf.Atan((v2 + Mathf.Sqrt(v2*v2 - g*(g*x*x + 2*y*v2))) / g*x);
+        angleRadians =Mathf.Sqrt((v2*v2 - g*(g*x*x + 2*y*v2)));// Mathf.Atan((v2 + Mathf.Sqrt(v2*v2 - g*(g*x*x + 2*y*v2))) / g*x);
                      
-        angleRadians=Mathf.Atan2(v2/g/x-angleRadians, 1) * Mathf.Rad2Deg;
-        angleRadians=-90-angleRadians;
+        angleRadians=Mathf.Atan((v2-angleRadians)/x/g) * Mathf.Rad2Deg;
+        angleRadians=angleRadians;
+        
         shellStartPos.rotation=bashnya.rotation;
         shellStartPos.Rotate(angleRadians,0,0);
     }
@@ -347,26 +378,28 @@ public class tank : MonoBehaviour
 
 
     public Transform _dushman;
-    Vector3 dir;
+    public Vector3 dir;
     float burchak;
     void bot(){
         if(_dushman!=null){
-            //dir.y=transform.position.y;
             burchak=Vector3.Angle(dir, transform.forward);
+            transform.Translate(0,0,VelocityForward*Time.deltaTime);
+            ismovingf();
             if(burchak>3f){
                 transform.Rotate(0,-Time.deltaTime*Turnspeed,0);ismovingf();
             }else{
                 if(burchak<=-3){
                     transform.Rotate(0,Time.deltaTime*Turnspeed,0);ismovingf();
                 }else{
-                    transform.rotation=Quaternion.LookRotation(dir,transform.up);
-                    checktank();
+                    //transform.rotation=Quaternion.LookRotation(dir,transform.up);
+                    
                 }
             }
         }
     }
     float turnRate;
     bool isturning;
+    float deltaAngleOfTurret=0,dt;
     void bashlig(){
             
         Vector3 dir2=new Vector3(dir.x,0,dir.z);
@@ -376,27 +409,69 @@ public class tank : MonoBehaviour
         }
         dir2=dir2.normalized;
         burchak=dir2.x*burchak;
+        dt=Time.deltaTime*kva;
+        if(deltaAngleOfTurret>360){
+            deltaAngleOfTurret-=360;
+        }else{
+            if(deltaAngleOfTurret<-360){
+                deltaAngleOfTurret+=360;
+            }
+        }
         if(burchak>=3f){
-            bashnya.Rotate(0,Time.deltaTime*Turnspeed,0);
-            
+            if(deltaAngleOfTurret>-ifneedturretlimit){
+            bashnya.Rotate(0,dt,0);
+            deltaAngleOfTurret-=dt;
+            }
         }else{
             if(burchak<=-3){
-                bashnya.Rotate(0,-Time.deltaTime*Turnspeed,0);
-                
+                if(deltaAngleOfTurret<ifneedturretlimit){
+                    bashnya.Rotate(0,-dt,0);
+                    deltaAngleOfTurret+=dt;
+                }
             }else{
                 if(burchak>0.01f){
-                    
-                    bashnya.Rotate(0,Time.deltaTime*Turnspeed,0);
+                    if(deltaAngleOfTurret>-ifneedturretlimit){
+                        bashnya.Rotate(0,dt,0);
+                        deltaAngleOfTurret-=dt;
+                    }
                 }else{
                     if(burchak<-0.01f){
-                        
-                        bashnya.Rotate(0,-Time.deltaTime*Turnspeed,0);
+                        if(deltaAngleOfTurret<ifneedturretlimit){
+                            bashnya.Rotate(0,-dt,0);
+                            deltaAngleOfTurret+=dt;
+                        }
                     }else{
-                        
+                        if(isbot){
+                            if(_dushman!=null){
+                            checktank();
+                            }
+                        }
                     }
                 }
             }
         }
     }
+    /*public Renderer rend,rend2;
+    void tracksf(){
+        float offset = 0;
+        rend.material.SetTextureOffset("_BaseMap", new Vector2(0,offset));
+        rend2.material.SetTextureOffset("_MainTex", new Vector2(0,offset));
+    }
+    void tracksb(){
+        float offset = 0;
+        rend.material.SetTextureOffset("_MainTex", new Vector2(-offset, 0));
+        rend2.material.SetTextureOffset("_MainTex", new Vector2(-offset, 0));
+    }
+
+    void tracksl(){
+        float offset = VelocityForward;
+        rend.material.SetTextureOffset("_MainTex", new Vector2(-offset, 0));
+        rend2.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+    }
+    void tracksr(){
+        float offset = VelocityForward*Time.deltaTime;
+        rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+        rend2.material.SetTextureOffset("_MainTex", new Vector2(-offset, 0));
+    }*/
     
 }

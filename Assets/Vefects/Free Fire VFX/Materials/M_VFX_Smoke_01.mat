@@ -2,20 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 8
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_VFX_Smoke_01
-  m_Shader: {fileID: 4800000, guid: 757cc62654d6ac046baabf16cb62594d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _ADD_PRECOMPUTED_VELOCITY
-  - _ENABLE_FOG_ON_TRANSPARENT
-  - _SURFACE_TYPE_TRANSPARENT
+  m_Shader: {fileID: 4800000, guid: 99134b1f0c27d54469a840832a28fadf, type: 3}
+  m_ShaderKeywords: _WINDQUALITY_NONE
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -25,10 +19,21 @@ Material:
   disabledShaderPasses:
   - DistortionVectors
   - TransparentBackface
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ExtraTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MaskMoveTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,6 +66,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SubsurfaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture:
         m_Texture: {fileID: 2800000, guid: e98f402880ccea64fbeab50c8ad0b82a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -73,13 +82,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 1
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
+    - _BillboardKwToggle: 0
+    - _BillboardShadowFade: 0.5
     - _BlendMode: 0
     - _CamOffSet: 0
     - _CameraOffset: 0
@@ -102,6 +112,8 @@ Material:
     - _Emissive_Amount: 10
     - _EnableFogOnTransparent: 1
     - _Global_Speed: 0.4
+    - _Glossiness: 0.5
+    - _HueVariationKwToggle: 0
     - _Intensity: 1
     - _MaskMoveMultiply: 1
     - _MaskMovePower: 1
@@ -113,10 +125,12 @@ Material:
     - _Mask_Multiply: 1
     - _Mask_Power: 1
     - _Mask_Speed: 0
+    - _Metallic: 0
     - _NoisesMultiply: 2
     - _NoisesPower: 1.5
     - _Noises_Multiply: 2
     - _Noises_Power: 1.5
+    - _NormalMapKwToggle: 0
     - _OpacityBoost: 1
     - _Opacity_Boost: 1
     - _Opacity_DepthDistance: 1
@@ -138,6 +152,8 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
+    - _SubsurfaceIndirect: 0.25
+    - _SubsurfaceKwToggle: 0
     - _SurfaceType: 1
     - _TessEdgeLength: 16
     - _TessMax: 25
@@ -149,7 +165,9 @@ Material:
     - _TransparentCullMode: 2
     - _TransparentSortPriority: 0
     - _TransparentZWrite: 0
+    - _TwoSided: 2
     - _UseShadowThreshold: 0
+    - _WindQuality: 0
     - _WindSpeed: 0.4
     - _ZTest1: 2
     - _ZTestDepthEqualForOpaque: 4
@@ -162,6 +180,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _MaskMoveScale: {r: 1, g: 1, b: 0, a: 0}
     - _MaskMove_Scale: {r: 1, g: 1, b: 0, a: 0}
     - _MaskOffset: {r: 0, g: 0, b: 0, a: 0}
@@ -180,4 +199,17 @@ Material:
     - _Noise_01_Speed: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Noise_02_Scale: {r: 1, g: 1, b: 0, a: 0}
     - _Noise_02_Speed: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
+    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &787629902968193905
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2

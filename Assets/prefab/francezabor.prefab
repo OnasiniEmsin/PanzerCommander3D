@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6752943690897991538}
   - component: {fileID: 1206522337730563068}
   - component: {fileID: 2224218648388259024}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: francezabor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

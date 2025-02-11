@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5615360442653470232}
   - component: {fileID: 297429392366429583}
   - component: {fileID: 1243017600165510348}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: oq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8012354672405608067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.155, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +60,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8012354672405608067}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -71,7 +71,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94ad24f3652a9d04ea5378ba8332b197, type: 2}
+  - {fileID: 2100000, guid: 8ea6f47e81499df47887b8015de83564, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -209,7 +209,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c14837dfa515883428e5652d93e80c72, type: 2}
+  - {fileID: 2100000, guid: ceb6ee6e9b978f547aa5d738a88dccda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

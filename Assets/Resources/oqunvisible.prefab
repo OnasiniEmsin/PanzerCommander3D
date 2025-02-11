@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1288707210499385527}
   - component: {fileID: -8897473502919064134}
   - component: {fileID: 3484865777160962529}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: oqunvisible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-8897473502919064134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +65,8 @@ MonoBehaviour:
   pentsmoke: {fileID: 8055107737559693018, guid: af5df9f9bee2f574ab07ba0044670faa,
     type: 3}
   mytank: {fileID: 0}
+  isExplosive: 0
+  oskolki: {fileID: 0}
 --- !u!135 &3484865777160962529
 SphereCollider:
   m_ObjectHideFlags: 0
